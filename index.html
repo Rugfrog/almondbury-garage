@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almondbury Garage | MOT, Servicing & Repairs in Huddersfield</title>
+<meta name="description" content="Friendly, independent garage in Almondbury, Huddersfield. MOTs, servicing, repairs, diagnostics, tyres, exhausts and wheel alignment. Ring 01484 546693 to book.">
+<meta name="theme-color" content="#79298c">
+<!-- Preview copy: remove this line once the site is live on almondburygarage.co.uk -->
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Almondbury Garage, Huddersfield">
+<meta property="og:description" content="MOT, service and repair centre. Ring 01484 546693 to book.">
+<meta property="og:image" content="assets/logo.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Almondbury Garage",
+  "image": "assets/logo.jpg",
+  "telephone": "+441484546693",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Upper Bankfield Mills, Almondbury Bank, Moldgreen",
+    "addressLocality": "Huddersfield",
+    "postalCode": "HD5 8HF",
+    "addressCountry": "GB"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 53.642597, "longitude": -1.762986 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "16:30"
+  }],
+  "sameAs": ["https://www.facebook.com/almondburyMOT/"]
+}
+</script>
+
+<style>
+  :root {
+    --purple: #79298c;
+    --purple-dark: #5c1d6b;
+    --purple-deep: #3d1248;
+    --purple-tint: #f5edf7;
+    --purple-line: #e4d3e9;
+    --ink: #231f20;
+    --muted: #5d5660;
+    --line: #e8e3ea;
+    --bg: #ffffff;
+    --soft: #faf7fb;
+    --open: #1f7a3f;
+    --closed: #a12a2a;
+    --radius: 14px;
+    --wrap: 1120px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--purple); }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 .5em; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 800; }
+  h3 { font-size: 1.2rem; font-weight: 700; }
+  p { margin: 0 0 1em; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  .eyebrow {
+    display: inline-block; font-weight: 700; font-size: .85rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--purple); margin-bottom: .6rem;
+  }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 46ch; }
+  section { padding: 84px 0; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: .55em; justify-content: center;
+    font: inherit; font-weight: 700; font-size: 1.05rem; text-decoration: none;
+    padding: .8em 1.35em; border-radius: 999px; border: 2px solid transparent;
+    cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s;
+    white-space: nowrap;
+  }
+  .btn svg { width: 1.15em; height: 1.15em; flex: none; }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--purple); color: #fff; }
+  .btn-primary:hover { background: var(--purple-dark); }
+  .btn-light { background: #fff; color: var(--purple-deep); }
+  .btn-light:hover { background: var(--purple-tint); }
+  .btn-ghost { border-color: rgba(255,255,255,.55); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--line); backdrop-filter: saturate(1.4) blur(6px);
+  }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 84px; }
+  .brand img { width: 290px; height: auto; }
+  .nav { display: flex; align-items: center; gap: 28px; }
+  .nav a.link { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .nav a.link:hover { color: var(--purple); }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; color: #fff; padding: 88px 0 96px;
+    background:
+      radial-gradient(1200px 500px at 85% 0%, rgba(255,255,255,.10), transparent 60%),
+      linear-gradient(160deg, var(--purple) 0%, var(--purple-dark) 55%, var(--purple-deep) 100%);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(2.3rem, 5.4vw, 3.9rem); font-weight: 800; margin-bottom: .35em; }
+  .hero p.sub { font-size: 1.2rem; color: rgba(255,255,255,.88); max-width: 34ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 26px; }
+  .status {
+    display: inline-flex; align-items: center; gap: .55em; font-weight: 600; font-size: .98rem;
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
+    padding: .45em .95em; border-radius: 999px;
+  }
+  .status .dot { width: 10px; height: 10px; border-radius: 50%; background: #9be3b2; box-shadow: 0 0 0 4px rgba(155,227,178,.25); }
+  .status.is-closed .dot { background: #f2a3a3; box-shadow: 0 0 0 4px rgba(242,163,163,.22); }
+  .hero-points { list-style: none; padding: 0; margin: 30px 0 0; display: flex; flex-wrap: wrap; gap: 10px 26px; color: rgba(255,255,255,.9); font-weight: 500; }
+  .hero-points li { display: flex; align-items: center; gap: .5em; }
+  .hero-points svg { width: 20px; height: 20px; color: #d7b6e0; }
+  .hero-art { justify-self: end; width: 100%; max-width: 420px; display: grid; justify-items: center; }
+  .hero-art svg { width: 100%; height: auto; }
+
+  /* Rating card in hero */
+  .rating-card {
+    background: #fff; color: var(--ink); border-radius: var(--radius); padding: 16px 20px;
+    display: flex; align-items: center; gap: 14px; box-shadow: 0 18px 40px rgba(30,5,40,.28);
+    margin-top: -18px; position: relative; text-decoration: none; max-width: 330px;
+  }
+  .rating-card:hover { box-shadow: 0 18px 44px rgba(30,5,40,.38); }
+  .rating-card .score { font-size: 2.2rem; font-weight: 800; color: var(--purple); line-height: 1; }
+  .stars { color: #f2b01e; letter-spacing: 2px; font-size: 1.05rem; line-height: 1; }
+  .rating-card small { display: block; color: var(--muted); font-size: .9rem; margin-top: 4px; }
+
+  /* How to book */
+  .book-strip { background: var(--soft); border-bottom: 1px solid var(--line); padding: 64px 0; }
+  .book-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: center; }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: step; }
+  .steps li {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px;
+    counter-increment: step; position: relative;
+  }
+  .steps li::before {
+    content: counter(step); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--purple); color: #fff; font-weight: 800; margin-bottom: 12px;
+  }
+  .steps h3 { font-size: 1.1rem; margin-bottom: .25em; }
+  .steps p { margin: 0; color: var(--muted); font-size: 1rem; }
+  .book-phone { font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 800; color: var(--purple); text-decoration: none; display: inline-block; margin: 4px 0 6px; }
+  .book-phone:hover { color: var(--purple-dark); }
+
+  /* Services */
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
+  .section-head .lede { margin: 0; }
+  .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .service {
+    border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; background: #fff;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+  }
+  .service:hover { border-color: var(--purple-line); box-shadow: 0 10px 28px rgba(121,41,140,.10); transform: translateY(-2px); }
+  .service .icon {
+    width: 52px; height: 52px; border-radius: 12px; background: var(--purple-tint); color: var(--purple);
+    display: grid; place-items: center; margin-bottom: 16px;
+  }
+  .service .icon svg { width: 28px; height: 28px; }
+  .service p { color: var(--muted); font-size: 1rem; margin: 0; }
+  .service.featured { background: var(--purple); border-color: var(--purple); color: #fff; }
+  .service.featured p { color: rgba(255,255,255,.85); }
+  .service.featured .icon { background: rgba(255,255,255,.15); color: #fff; }
+  .mot-check {
+    margin-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    background: var(--soft); border: 1px dashed var(--purple-line); border-radius: var(--radius); padding: 18px 22px;
+  }
+  .mot-check p { margin: 0; font-weight: 600; }
+  .mot-check a { font-weight: 700; }
+
+  /* Reviews */
+  .reviews { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .review { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; display: flex; flex-direction: column; }
+  .review h3 { margin: 12px 0 8px; font-size: 1.15rem; }
+  .review blockquote { margin: 0 0 18px; color: var(--muted); font-size: 1.02rem; flex: 1; }
+  .review footer { font-weight: 700; font-size: .95rem; }
+  .review footer span { font-weight: 500; color: var(--muted); }
+  .review-source { margin-top: 22px; color: var(--muted); font-size: .95rem; }
+
+  /* Find us */
+  .find-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 28px; align-items: stretch; }
+  .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 28px; background: #fff; }
+  .contact-list { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 18px; }
+  .contact-list li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+  .contact-list .ci { width: 40px; height: 40px; border-radius: 10px; background: var(--purple-tint); color: var(--purple); display: grid; place-items: center; }
+  .contact-list .ci svg { width: 21px; height: 21px; }
+  .contact-list strong { display: block; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .contact-list a, .contact-list address { font-style: normal; color: var(--ink); font-weight: 600; text-decoration: none; }
+  .contact-list a:hover { color: var(--purple); }
+  .hours { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .hours td { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .hours td:last-child { text-align: right; }
+  .hours tr:last-child td { border-bottom: 0; }
+  .hours tr.today td { color: var(--purple); font-weight: 700; }
+  .hours .shut { color: var(--muted); }
+  .map { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); min-height: 380px; background: var(--soft); position: relative; }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* Call-back form */
+  .callback { background: var(--ink); color: #fff; }
+  .callback-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+  .callback .eyebrow { color: #d7b6e0; }
+  .callback p.lede { color: rgba(255,255,255,.78); }
+  .callback .note { margin-top: 22px; padding: 16px 18px; border-radius: 12px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.85); font-size: 1rem; }
+  .callback .note a { color: #fff; font-weight: 700; }
+  form { background: #fff; color: var(--ink); border-radius: var(--radius); padding: 30px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
+  .field { display: grid; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  label { font-weight: 700; font-size: .95rem; }
+  label .opt { font-weight: 500; color: var(--muted); }
+  input, select, textarea {
+    font: inherit; font-size: 1rem; color: var(--ink); width: 100%;
+    padding: .7em .85em; border: 1.5px solid #d9d2dc; border-radius: 10px; background: #fff;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 4px rgba(121,41,140,.15); }
+  input.reg { text-transform: uppercase; font-weight: 700; letter-spacing: .06em; background: #fff8d6; border-color: #e6d98a; }
+  ::placeholder { color: #9a93a0; font-weight: 400; opacity: 1; }
+  input.reg::placeholder { color: #b8ad6a; font-weight: 600; }
+  textarea { min-height: 110px; resize: vertical; }
+  .form-foot { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .form-foot small { color: var(--muted); font-size: .9rem; flex: 1; min-width: 200px; }
+  .form-msg { grid-column: 1 / -1; display: none; padding: 14px 16px; border-radius: 10px; font-weight: 600; }
+  .form-msg.ok { display: block; background: #e8f5ec; color: var(--open); }
+  .form-msg.err { display: block; background: #fbeaea; color: var(--closed); }
+  .form-msg a { color: inherit; }
+  .hp { position: absolute; left: -9999px; }
+
+  /* Footer */
+  .site-footer { background: #171415; color: rgba(255,255,255,.75); padding: 40px 0 110px; font-size: .98rem; }
+  .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
+  .site-footer a { color: #fff; text-decoration: none; font-weight: 600; }
+  .site-footer a:hover { color: #d7b6e0; }
+  .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+
+  /* Mobile call bar */
+  .call-bar {
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; display: none;
+    box-shadow: 0 10px 30px rgba(20,5,25,.35);
+  }
+  .call-bar .btn { width: 100%; padding: 1em; font-size: 1.1rem; }
+
+  @media (max-width: 960px) {
+    .hero-grid, .book-grid, .find-grid, .callback-grid { grid-template-columns: 1fr; }
+    .hero-art { justify-self: center; max-width: 340px; margin-top: 10px; }
+    .services { grid-template-columns: repeat(2, 1fr); }
+    .review-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    section { padding: 64px 0; }
+    .wrap { padding: 0 16px; }
+    .nav .link { display: none; }
+    .header-row { height: 70px; }
+    .brand img { width: 210px; }
+    .nav .btn { padding: .6em 1em; font-size: .95rem; }
+    .nav .btn .num { display: none; }
+    .hero { padding: 56px 0 72px; }
+    .steps { grid-template-columns: 1fr; }
+    form { grid-template-columns: 1fr; padding: 24px 20px; }
+    .call-bar { display: block; }
+    .map { min-height: 300px; }
+  }
+  @media (max-width: 520px) {
+    .services { grid-template-columns: 1fr; }
+    .hero-actions .btn { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Re-usable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10 3.5 10 6v2H8v3h2v11h4V11h2.6l.4-3z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="Almondbury Garage, home">
+      <img src="assets/logo.jpg" width="529" height="133" alt="Almondbury Garage, Huddersfield. MOT, Service and Repair Centre">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#reviews">Reviews</a>
+      <a class="link" href="#find-us">Find us</a>
+      <a class="btn btn-primary" href="tel:01484546693"><svg><use href="#i-phone"/></svg><span>Call<span class="num"> 01484 546693</span></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" style="color:#e2c6ea">The one stop car centre</span>
+        <h1>Honest MOTs, servicing and repairs in Huddersfield</h1>
+        <p class="sub">A friendly, independent garage at Upper Bankfield Mills, just off Almondbury Bank. Give us a ring and we'll get you booked in.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="tel:01484546693"><svg><use href="#i-phone"/></svg>Call 01484 546693</a>
+          <a class="btn btn-ghost" href="#find-us"><svg><use href="#i-pin"/></svg>Find us</a>
+        </div>
+        <span class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
+        <ul class="hero-points">
+          <li><svg><use href="#i-check"/></svg>Local and independent</li>
+          <li><svg><use href="#i-check"/></svg>Fair, straight-talking prices</li>
+          <li><svg><use href="#i-check"/></svg>MOT, service and repairs under one roof</li>
+        </ul>
+      </div>
+
+      <div class="hero-art">
+        <!-- Castle Hill's Victoria Tower, the tower in the logo -->
+        <svg viewBox="0 0 400 360" role="img" aria-label="Illustration of Victoria Tower on Castle Hill">
+          <defs>
+            <linearGradient id="tower" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#eadcf0" stop-opacity=".95"/>
+            </linearGradient>
+            <linearGradient id="fade-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset=".72" stop-color="#fff"/>
+              <stop offset="1" stop-color="#000"/>
+            </linearGradient>
+            <mask id="fade"><rect width="400" height="360" fill="url(#fade-grad)"/></mask>
+          </defs>
+          <circle cx="262" cy="118" r="92" fill="#ffffff" opacity=".07"/>
+          <g mask="url(#fade)">
+            <!-- tower body -->
+            <g transform="translate(150 40)">
+              <path d="M8 34 L8 26 L18 26 L18 34 L30 34 L30 26 L40 26 L40 34 L52 34 L52 26 L62 26 L62 34 L74 34 L74 26 L84 26 L84 34 L92 34 L92 226 L8 226 Z" fill="url(#tower)"/>
+              <!-- stair turret -->
+              <path d="M74 34 L74 4 L80 4 L80 10 L86 10 L86 4 L92 4 L92 10 L98 10 L98 4 L104 4 L104 226 L92 226 L92 34 Z" fill="#ffffff" opacity=".9"/>
+            <!-- string courses -->
+            <rect x="8" y="78" width="84" height="5" fill="#d9c3e2"/>
+            <rect x="8" y="140" width="84" height="5" fill="#d9c3e2"/>
+            <!-- windows -->
+            <g fill="#79298c">
+              <rect x="22" y="48" width="8" height="18" rx="4"/>
+              <rect x="38" y="48" width="8" height="18" rx="4"/>
+              <rect x="54" y="48" width="8" height="18" rx="4"/>
+              <rect x="34" y="100" width="7" height="14" rx="3.5"/>
+              <rect x="60" y="112" width="7" height="14" rx="3.5"/>
+              <rect x="94" y="40" width="5" height="11" rx="2.5"/>
+              <rect x="94" y="96" width="5" height="11" rx="2.5"/>
+              <rect x="94" y="152" width="5" height="11" rx="2.5"/>
+              <path d="M40 206 L40 184 a10 10 0 0 1 20 0 L60 206 Z"/>
+              </g>
+            </g>
+            <!-- Castle Hill, in front of the tower's base -->
+            <path d="M20 360 C 80 300, 140 252, 206 248 C 272 252, 332 300, 392 360 Z" fill="#9550a8"/>
+            <path d="M44 340 C 120 312, 290 312, 370 340" stroke="#ffffff" stroke-opacity=".4" stroke-width="3" fill="none" stroke-dasharray="14 12"/>
+          </g>
+        </svg>
+        <a class="rating-card" href="#reviews">
+          <span class="score">5.0</span>
+          <span>
+            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+            <small>From 9 verified customer reviews on BookMyGarage</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to book -->
+  <section class="book-strip" id="book">
+    <div class="wrap book-grid">
+      <div>
+        <span class="eyebrow">Booking</span>
+        <h2>Booking's done over the phone</h2>
+        <p class="lede">No online booking systems and no waiting around for emails. Ring us during opening hours and we'll sort a day out there and then.</p>
+        <a class="book-phone" href="tel:01484546693">01484 546693</a>
+        <p style="color:var(--muted);margin:0">Monday to Friday, 8:00am to 4:30pm</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Give us a ring</h3><p>Tell us what the car needs, or what it's doing.</p></li>
+        <li><h3>Pick a day</h3><p>We'll find a slot that works for you.</p></li>
+        <li><h3>Drop it off</h3><p>Bring it to Upper Bankfield Mills and we'll take it from there.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2>Everything your car needs</h2>
+        </div>
+        <p class="lede">From your yearly MOT to the knock you can't pin down, bring it to us.</p>
+      </div>
+
+      <div class="services">
+        <article class="service featured">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9z"/><path d="m9 13 2 2 4-4"/></svg></div>
+          <h3>MOT testing</h3>
+          <p>Class 4 MOTs for cars, vans and motorhomes up to 12 seats, plus goods vehicles under 3 tonnes.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.5-.7-.7-2.5z"/></svg></div>
+          <h3>Servicing</h3>
+          <p>Interim and full services to keep your car running right and your service history up to date.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+          <h3>Repairs</h3>
+          <p>Brakes, clutches, suspension, engine work and everything in between.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <h3>Fault diagnosis</h3>
+          <p>Warning light on the dash? We'll find out what's causing it and talk you through the fix.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/></svg></div>
+          <h3>Tyres</h3>
+          <p>New tyres supplied and fitted, plus puncture checks and pressures.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h11a3 3 0 0 0 3-3V8h3"/><path d="M2 18h12a5 5 0 0 0 5-5v-1h2"/><path d="M19 5h.01M22 8h.01M21 3h.01"/></svg></div>
+          <h3>Exhausts</h3>
+          <p>Blowing, rattling or failed on emissions? We'll repair or replace it.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2"/><path d="M12 14v8M10.3 11 3 8.5M13.7 11 21 8.5"/></svg></div>
+          <h3>Wheel alignment</h3>
+          <p>Car pulling to one side or tyres wearing unevenly? We'll get it tracking straight.</p>
+        </article>
+        <article class="service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Insurance work</h3>
+          <p>Repairs carried out for insurance claims. Ring us to talk it through.</p>
+        </article>
+      </div>
+
+      <div class="mot-check">
+        <p>Not sure when your MOT is due?</p>
+        <a href="https://www.gov.uk/check-mot-status" target="_blank" rel="noopener">Check it on GOV.UK <svg style="width:1em;height:1em;vertical-align:-2px"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Reviews</span>
+          <h2>What our customers say</h2>
+        </div>
+        <p class="lede"><strong style="color:var(--ink)">5.0 out of 5</strong> from 9 verified reviews.</p>
+      </div>
+
+      <div class="review-grid">
+        <article class="review">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <h3>"Trustworthy"</h3>
+          <blockquote>2nd time I have used this garage for MOT and service of my car. Excellent service.</blockquote>
+          <footer>Shelagh <span>· May 2025</span></footer>
+        </article>
+        <article class="review">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <h3>"Very friendly local garage."</h3>
+          <blockquote>I am very happy with my MOT and service. I am happy to support a local garage and I feel that the work was completed to a good standard.</blockquote>
+          <footer>Catherine <span>· February 2024</span></footer>
+        </article>
+        <article class="review">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <h3>"Great Service!"</h3>
+          <blockquote>Really happy! First time trying this local garage and they were friendly and helpful. Very genuine and didn't feel like they were trying to overcharge etc like other garages. Definitely recommend!</blockquote>
+          <footer>Leisanne <span>· March 2023</span></footer>
+        </article>
+      </div>
+      <p class="review-source">Reviews from <a href="https://bookmygarage.com/garage-detail/almondburygaragelimted/hd58hf/" target="_blank" rel="noopener">BookMyGarage</a>.</p>
+    </div>
+  </section>
+
+  <!-- Find us -->
+  <section id="find-us">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Find us</span>
+          <h2>Pop in, or give us a ring</h2>
+        </div>
+        <p class="lede">Just off Almondbury Bank in Moldgreen, about two miles from Huddersfield town centre.</p>
+      </div>
+
+      <div class="find-grid">
+        <div class="card">
+          <ul class="contact-list">
+            <li>
+              <span class="ci"><svg><use href="#i-phone"/></svg></span>
+              <div><strong>Phone</strong><a href="tel:01484546693" style="font-size:1.35rem">01484 546693</a></div>
+            </li>
+            <li>
+              <span class="ci"><svg><use href="#i-pin"/></svg></span>
+              <div><strong>Address</strong>
+                <address>Almondbury Garage<br>Upper Bankfield Mills<br>Almondbury Bank, Moldgreen<br>Huddersfield HD5 8HF</address>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Upper+Bankfield+Mills,+Almondbury+Bank,+Huddersfield+HD5+8HF" target="_blank" rel="noopener" style="color:var(--purple);font-weight:700;display:inline-block;margin-top:6px">Get directions →</a>
+              </div>
+            </li>
+            <li>
+              <span class="ci"><svg><use href="#i-clock"/></svg></span>
+              <div style="width:100%"><strong>Opening hours</strong>
+                <table class="hours" id="hours">
+                  <tr data-day="1"><td>Monday</td><td>8:00am – 4:30pm</td></tr>
+                  <tr data-day="2"><td>Tuesday</td><td>8:00am – 4:30pm</td></tr>
+                  <tr data-day="3"><td>Wednesday</td><td>8:00am – 4:30pm</td></tr>
+                  <tr data-day="4"><td>Thursday</td><td>8:00am – 4:30pm</td></tr>
+                  <tr data-day="5"><td>Friday</td><td>8:00am – 4:30pm</td></tr>
+                  <tr data-day="6"><td>Saturday</td><td class="shut">Closed</td></tr>
+                  <tr data-day="0"><td>Sunday</td><td class="shut">Closed</td></tr>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="map">
+          <iframe title="Map showing Almondbury Garage, HD5 8HF"
+            src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s53.642597,-1.762986!6i16"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-back request -->
+  <section class="callback" id="contact">
+    <div class="wrap callback-grid">
+      <div>
+        <span class="eyebrow">Got a question?</span>
+        <h2>Leave your number and we'll ring you back</h2>
+        <p class="lede">Can't call right now? Pop your details in and we'll give you a ring during opening hours.</p>
+        <p class="note">Need to book? It's quickest to call us on <a href="tel:01484546693">01484 546693</a>.</p>
+      </div>
+
+      <form id="callback-form" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-reg">Registration <span class="opt">(optional)</span></label>
+          <input id="f-reg" name="registration" class="reg" placeholder="AB12 CDE" maxlength="10" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-topic">What's it about?</label>
+          <select id="f-topic" name="topic">
+            <option>MOT</option>
+            <option>Service</option>
+            <option>Repair or fault</option>
+            <option>Tyres</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-msg">Anything else we should know? <span class="opt">(optional)</span></label>
+          <textarea id="f-msg" name="message" placeholder="e.g. a squeak from the front when braking"></textarea>
+        </div>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-msg" id="form-msg" role="status"></div>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit" id="f-submit"><svg><use href="#i-phone"/></svg>Ring me back</button>
+          <small>We'll only use your number to call you back about this.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <strong style="color:#fff">Almondbury Garage</strong> · Upper Bankfield Mills, Almondbury Bank, Moldgreen, Huddersfield HD5 8HF<br>
+      © <span id="year">2026</span> Almondbury Garage. MOT, Service &amp; Repair Centre.
+    </div>
+    <div class="footer-links">
+      <a href="tel:01484546693">01484 546693</a>
+      <a href="https://www.facebook.com/almondburyMOT/" target="_blank" rel="noopener"><svg style="width:1em;height:1em;vertical-align:-2px"><use href="#i-fb"/></svg> Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="call-bar">
+  <a class="btn btn-primary" href="tel:01484546693"><svg><use href="#i-phone"/></svg>Call 01484 546693</a>
+</div>
+
+<script>
+  // ---- Settings -------------------------------------------------------
+  // Call-back form: get a free access key from https://web3forms.com
+  // (enter the email address the requests should go to) and paste it here.
+  // Until a key is added the form tells people to ring instead.
+  var FORM_ACCESS_KEY = "";
+  var PHONE = "01484 546693";
+
+  // Opening hours, by day number (0 = Sunday). Times are 24h "HH:MM".
+  var HOURS = { 1: ["08:00", "16:30"], 2: ["08:00", "16:30"], 3: ["08:00", "16:30"], 4: ["08:00", "16:30"], 5: ["08:00", "16:30"] };
+  // ---------------------------------------------------------------------
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Open / closed status, worked out in UK time wherever the visitor is.
+  (function () {
+    var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var parts = {};
+    try {
+      new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+        .formatToParts(new Date()).forEach(function (p) { parts[p.type] = p.value; });
+    } catch (e) { return; }
+    var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(parts.weekday);
+    if (day < 0) return;
+    var now = parts.hour + ":" + parts.minute;
+
+    var row = document.querySelector('#hours tr[data-day="' + day + '"]');
+    if (row) row.classList.add("today");
+
+    function pretty(t) {
+      var h = +t.slice(0, 2), m = t.slice(3);
+      var suffix = h >= 12 ? "pm" : "am";
+      h = h % 12 || 12;
+      return h + (m === "00" ? "" : ":" + m) + suffix;
+    }
+
+    var status = document.getElementById("status");
+    var text = document.getElementById("status-text");
+    var today = HOURS[day];
+    if (today && now >= today[0] && now < today[1]) {
+      text.textContent = "Open now, until " + pretty(today[1]);
+      return;
+    }
+    status.classList.add("is-closed");
+    if (today && now < today[0]) {
+      text.textContent = "Closed, opens today at " + pretty(today[0]);
+      return;
+    }
+    for (var i = 1; i <= 7; i++) {
+      var d = (day + i) % 7;
+      if (HOURS[d]) {
+        text.textContent = "Closed, opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " at " + pretty(HOURS[d][0]);
+        return;
+      }
+    }
+  })();
+
+  // Call-back form
+  (function () {
+    var form = document.getElementById("callback-form");
+    var msg = document.getElementById("form-msg");
+    var btn = document.getElementById("f-submit");
+    var ringUs = ' Please ring us on <a href="tel:' + PHONE.replace(/\s/g, "") + '">' + PHONE + "</a>.";
+
+    function show(kind, html) { msg.className = "form-msg " + kind; msg.innerHTML = html; }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = form.elements["name"].value.trim();
+      var phone = form.phone.value.trim();
+      if (!name || phone.replace(/\D/g, "").length < 10) {
+        show("err", "Please add your name and a phone number we can reach you on.");
+        (name ? form.elements["phone"] : form.elements["name"]).focus();
+        return;
+      }
+      if (form.botcheck.checked) return;
+      if (!FORM_ACCESS_KEY) {
+        show("err", "Sorry, this form isn't switched on yet." + ringUs);
+        return;
+      }
+
+      var data = new FormData(form);
+      data.set("registration", (form.registration.value || "").toUpperCase());
+      data.append("access_key", FORM_ACCESS_KEY);
+      data.append("subject", "Call-back request: " + form.topic.value + " (" + name + ")");
+      data.append("from_name", "Almondbury Garage website");
+
+      btn.disabled = true;
+      btn.lastChild.textContent = "Sending…";
+      fetch("https://api.web3forms.com/submit", { method: "POST", body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.success) throw new Error(res.message);
+          form.reset();
+          show("ok", "Thanks " + name.split(" ")[0].replace(/[<>&]/g, "") + ", we'll give you a ring back during opening hours.");
+        })
+        .catch(function () { show("err", "Sorry, that didn't send." + ringUs); })
+        .then(function () { btn.disabled = false; btn.lastChild.textContent = "Ring me back"; });
+    });
+  })();
+</script>
+</body>
+</html>
