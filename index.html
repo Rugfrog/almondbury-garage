@@ -121,9 +121,12 @@
   .topbar-left, .topbar-right { display: flex; align-items: center; gap: 22px; }
   .topbar a { color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: .45em; }
   .topbar a:hover { color: var(--brand-pale); }
-  .status { display: inline-flex; align-items: center; gap: .55em; font-weight: 600; }
-  .status .dot { width: 9px; height: 9px; border-radius: 50%; background: #5ad17f; box-shadow: 0 0 0 4px rgba(90,209,127,.2); }
-  .status.is-closed .dot { background: #f08a8a; box-shadow: 0 0 0 4px rgba(240,138,138,.2); }
+  .status {
+    display: inline-flex; align-items: center; gap: .6em; margin-top: 26px; color: #fff; font-weight: 700; font-size: 1.02rem;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); padding: .5em 1.05em; border-radius: 999px;
+  }
+  .status .dot { width: 10px; height: 10px; border-radius: 50%; background: #9be3b2; box-shadow: 0 0 0 4px rgba(155,227,178,.25); }
+  .status.is-closed .dot { background: #f2a3a3; box-shadow: 0 0 0 4px rgba(242,163,163,.22); }
 
   /* Header */
   .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
@@ -151,7 +154,7 @@
   .hero h1 { color: #fff; font-size: clamp(2.7rem, 5.6vw, 4.5rem); font-weight: 800; line-height: .98; margin-bottom: .35em; }
   .hero p.sub { font-size: 1.25rem; color: rgba(255,255,255,.92); max-width: 36ch; margin-bottom: 30px; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 34px; color: rgba(255,255,255,.92); font-weight: 600; }
+  .hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 22px; color: rgba(255,255,255,.92); font-weight: 600; }
   .hero-proof .stars { color: var(--star); letter-spacing: 2px; font-size: 1.1rem; }
   .hero-proof span { display: inline-flex; align-items: center; gap: .5em; }
 
@@ -454,7 +457,7 @@
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-left">
-      <span class="status" id="status"><span class="dot"></span><span id="status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
+      <span>Mon to Fri, 8:00am to 4:30pm</span>
       <span class="hide-sm">Upper Bankfield Mills, Almondbury Bank, HD5 8HF</span>
     </div>
     <div class="topbar-right">
@@ -494,9 +497,9 @@
           <a class="btn btn-white" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>Call 01484 546693</a>
           <a class="btn btn-outline" href="#contact">Ring me back</a>
         </div>
+        <span class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
         <div class="hero-proof">
           <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 from 9 reviews</span>
-          <span><svg class="i"><use href="#i-clock"/></svg>Mon to Fri, 8:00am to 4:30pm</span>
         </div>
       </div>
 
