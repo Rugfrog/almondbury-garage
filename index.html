@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Almondbury Garage | MOT, Servicing & Repairs in Huddersfield</title>
-<meta name="description" content="Friendly, independent garage in Almondbury, Huddersfield. MOTs, servicing, repairs, diagnostics, tyres, exhausts and wheel alignment. Ring 01484 546693 to book.">
+<meta name="description" content="Independent garage at Upper Bankfield Mills, Almondbury Bank, Huddersfield. MOTs, servicing, repairs, diagnostics, tyres, exhausts and wheel alignment. Ring 01484 546693 to book.">
 <meta name="theme-color" content="#7a288e">
 <!-- Preview copy: remove this line once the site is live on almondburygarage.co.uk -->
 <meta name="robots" content="noindex">
@@ -17,8 +17,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -47,417 +46,276 @@
 
 <style>
   :root {
-    /* Brand purple sampled from the logo */
-    --brand: #7a288e;
-    --brand-rgb: 122, 40, 142;
-    --brand-hover: #65207a;
-    --brand-tint: #f4ebf6;
-    --brand-line: #e4d2e9;
-    --brand-pale: #d9b8e2;
-    --ink: #231f20;
-    --body: #39333d;
-    --muted: #5f5763;
-    --line: #e7e1e9;
-    --bg: #ffffff;
-    --soft: #f7f3f8;
-    --plate: #f9d71c;
-    --star: #f2b01e;
-    --open: #1f7a3f;
-    --closed: #a12a2a;
-    --radius: 16px;
+    --brand: #7a288e;          /* purple from the logo */
+    --brand-dark: #5f1f6f;
+    --ink: #231f20;            /* black from the logo */
+    --text: #2e2a2c;
+    --muted: #5c5658;
+    --paper: #f5f2ed;
+    --line: #ddd5cc;
+    --yellow: #f9d71c;
+    --green: #2bd46b;
+    --red: #ff5a5a;
     --wrap: 1180px;
-    --head: "Barlow Semi Condensed", "Barlow", system-ui, sans-serif;
+    --head: "Oswald", "Arial Narrow", Arial, sans-serif;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--body);
-    font-family: "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    margin: 0; background: #fff; color: var(--text);
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased;
   }
   img { max-width: 100%; height: auto; display: block; }
   a { color: var(--brand); }
-  h1, h2, h3 { font-family: var(--head); color: var(--ink); line-height: 1.05; margin: 0 0 .45em; letter-spacing: -0.005em; }
-  h2 { font-size: clamp(2.1rem, 4vw, 3rem); font-weight: 800; }
-  h3 { font-size: 1.4rem; font-weight: 700; line-height: 1.15; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 600; color: var(--ink); line-height: 1.1; margin: 0 0 .5em; }
+  h2 { font-size: clamp(2rem, 3.6vw, 2.75rem); }
+  h3 { font-size: 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
   p { margin: 0 0 1em; }
   .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: .6em;
-    font-family: var(--head); font-weight: 700; font-size: .95rem; letter-spacing: .14em;
-    text-transform: uppercase; color: var(--brand); margin-bottom: .7rem;
+  section { padding: 88px 0; }
+  .muted { color: var(--muted); }
+  svg.i { width: 1.15em; height: 1.15em; flex: none; }
+
+  /* Label styled like the "· GARAGE ·" bar in the logo */
+  .tag {
+    display: inline-block; background: var(--brand); color: #fff; border-radius: 999px;
+    font-family: var(--head); font-weight: 500; font-size: .82rem; letter-spacing: .38em; text-transform: uppercase;
+    padding: .28em .7em .28em 1.08em; margin-bottom: 16px; line-height: 1.5;
   }
-  .eyebrow::before { content: ""; width: 28px; height: 3px; border-radius: 2px; background: currentColor; }
-  .lede { font-size: 1.18rem; color: var(--muted); max-width: 48ch; }
-  section { padding: 100px 0; }
-  svg.i { width: 1.2em; height: 1.2em; flex: none; }
+  .tag::before, .tag::after { content: "·"; }
+  .tag::before { margin-right: .35em; }
+  .tag::after { margin-left: -.03em; }
+  .tag.light { background: #fff; color: var(--brand); }
 
   /* Buttons */
   .btn {
-    display: inline-flex; align-items: center; gap: .6em; justify-content: center;
-    font: inherit; font-weight: 700; font-size: 1.05rem; text-decoration: none; line-height: 1.2;
-    padding: .9em 1.5em; border-radius: 12px; border: 2px solid transparent;
-    cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s, box-shadow .15s;
-    white-space: nowrap;
+    display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+    font-family: var(--head); font-weight: 500; font-size: 1.05rem; letter-spacing: .05em; text-transform: uppercase;
+    text-decoration: none; line-height: 1.2; padding: .95em 1.5em; border-radius: 4px; border: 2px solid transparent;
+    cursor: pointer; transition: background .15s, color .15s, border-color .15s; white-space: nowrap;
   }
-  .btn:active { transform: translateY(1px); }
-  .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 6px 16px rgba(var(--brand-rgb), .28); }
-  .btn-primary:hover { background: var(--brand-hover); }
-  .btn-white { background: #fff; color: var(--brand); box-shadow: 0 8px 20px rgba(20, 0, 30, .18); }
-  .btn-white:hover { background: var(--brand-tint); }
-  .btn-outline { border-color: rgba(255,255,255,.6); color: #fff; }
-  .btn-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; }
-  .btn-block { width: 100%; }
+  .btn-primary { background: var(--brand); color: #fff; }
+  .btn-primary:hover { background: var(--brand-dark); }
+  .btn-white { background: #fff; color: var(--brand); }
+  .btn-white:hover { background: var(--paper); }
+  .btn-yellow { background: var(--yellow); color: var(--ink); }
+  .btn-yellow:hover { background: #ffe24d; }
+  .btn-line { border-color: rgba(255,255,255,.7); color: #fff; }
+  .btn-line:hover { background: #fff; color: var(--brand); }
+
+  /* Open / closed status */
+  .status { display: inline-flex; align-items: center; gap: .6em; font-weight: 700; }
+  .status .dot { width: 11px; height: 11px; border-radius: 50%; background: #aaa; flex: none; }
+  .status.is-open .dot { background: var(--green); animation: pulse 2s infinite; }
+  .status.is-closed .dot { background: var(--red); }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(43,212,107,.55); } 70% { box-shadow: 0 0 0 9px rgba(43,212,107,0); } 100% { box-shadow: 0 0 0 0 rgba(43,212,107,0); } }
 
   /* Top bar */
-  .topbar { background: var(--ink); color: rgba(255,255,255,.85); font-size: .92rem; }
-  .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; height: 42px; }
+  .topbar { background: var(--ink); color: rgba(255,255,255,.82); font-size: .95rem; }
+  .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 42px; }
   .topbar-left, .topbar-right { display: flex; align-items: center; gap: 22px; }
-  .topbar a { color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: .45em; }
-  .topbar a:hover { color: var(--brand-pale); }
-  .status {
-    display: inline-flex; align-items: center; gap: .6em; margin-top: 26px; color: #fff; font-weight: 700; font-size: 1.02rem;
-    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); padding: .5em 1.05em; border-radius: 999px;
-  }
-  .status .dot { width: 10px; height: 10px; border-radius: 50%; background: #9be3b2; box-shadow: 0 0 0 4px rgba(155,227,178,.25); }
-  .status.is-closed .dot { background: #f2a3a3; box-shadow: 0 0 0 4px rgba(242,163,163,.22); }
+  .topbar .status { color: #fff; }
+  .topbar a { color: #fff; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: .45em; }
+  .topbar a:hover { color: var(--yellow); }
 
   /* Header */
-  .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
-  .site-header.scrolled { box-shadow: 0 6px 24px rgba(35, 31, 32, .08); }
-  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 92px; }
-  .brand img { width: 310px; height: auto; }
-  .nav { display: flex; align-items: center; gap: 30px; }
-  .nav a.link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1.02rem; position: relative; }
-  .nav a.link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--brand); transform: scaleX(0); transition: transform .15s; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 3px solid var(--brand); }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 90px; }
+  .brand img { width: 300px; }
+  .nav { display: flex; align-items: center; gap: 28px; }
+  .nav a.link { font-family: var(--head); font-weight: 500; font-size: 1rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   .nav a.link:hover { color: var(--brand); }
-  .nav a.link:hover::after { transform: scaleX(1); }
+  .head-phone { display: flex; flex-direction: column; align-items: flex-end; text-decoration: none; line-height: 1.1; padding-left: 24px; border-left: 1px solid var(--line); }
+  .head-phone small { font-size: .85rem; color: var(--muted); font-weight: 600; }
+  .head-phone span { font-family: var(--head); font-weight: 600; font-size: 1.6rem; color: var(--brand); }
+  .head-phone:hover span { color: var(--brand-dark); }
+  .head-call { display: none; }
 
   /* Hero */
-  .hero { position: relative; background: var(--brand); color: #fff; padding: 0; overflow: hidden; }
-  .hero-photo { position: absolute; top: 0; right: 0; bottom: 0; width: 60%; }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; filter: saturate(.75); }
-  .hero-photo::after {
-    content: ""; position: absolute; inset: 0;
-    background:
-      linear-gradient(90deg, var(--brand) 0%, rgba(var(--brand-rgb), .85) 14%, rgba(var(--brand-rgb), 0) 46%),
-      linear-gradient(0deg, rgba(20, 16, 18, .38), rgba(20, 16, 18, .18));
+  .hero { padding: 0; display: grid; grid-template-columns: 1fr 1fr; background: var(--brand); min-height: 560px; }
+  .hero-text {
+    color: #fff; padding: 76px 56px 76px max(24px, calc((100vw - var(--wrap)) / 2 + 24px));
+    display: flex; flex-direction: column; justify-content: center;
   }
-  .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; min-height: 620px; padding: 72px 24px; }
-  .hero .eyebrow { color: #fff; opacity: .9; }
-  .hero h1 { color: #fff; font-size: clamp(2.7rem, 5.6vw, 4.5rem); font-weight: 800; line-height: .98; margin-bottom: .35em; }
-  .hero p.sub { font-size: 1.25rem; color: rgba(255,255,255,.92); max-width: 36ch; margin-bottom: 30px; }
+  .hero h1 { color: #fff; font-size: clamp(2.6rem, 5vw, 4.1rem); line-height: 1.02; margin-bottom: .4em; }
+  .hero p.sub { font-size: 1.25rem; color: rgba(255,255,255,.92); max-width: 30em; margin-bottom: 30px; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 22px; color: rgba(255,255,255,.92); font-weight: 600; }
-  .hero-proof .stars { color: var(--star); letter-spacing: 2px; font-size: 1.1rem; }
-  .hero-proof span { display: inline-flex; align-items: center; gap: .5em; }
+  .hero .status { margin-top: 26px; align-self: flex-start; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.25); padding: .5em 1em; border-radius: 999px; color: #fff; font-size: 1.02rem; }
+  .hero-photo { position: relative; overflow: hidden; }
+  .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 40%; }
 
-  /* MOT checker card */
-  .mot-card {
-    justify-self: end; width: 100%; max-width: 420px; background: #fff; color: var(--body);
-    border-radius: 20px; padding: 30px 28px 26px; box-shadow: 0 30px 60px rgba(30, 5, 40, .35);
-  }
-  .mot-card h2 { font-size: 2rem; margin-bottom: .25em; }
-  .mot-card > p { color: var(--muted); font-size: 1.02rem; margin-bottom: 18px; }
-  .plate {
-    display: flex; align-items: stretch; border: 3px solid var(--ink); border-radius: 10px; overflow: hidden;
-    background: var(--plate); margin-bottom: 14px; box-shadow: inset 0 -3px 0 rgba(0,0,0,.08);
-  }
-  .plate:focus-within { box-shadow: 0 0 0 4px rgba(var(--brand-rgb), .25); }
-  .plate-flag {
-    background: #1d4fa3; color: #fff; width: 48px; flex: none; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; font-family: var(--head); font-weight: 800; font-size: 1.05rem; letter-spacing: .04em;
-  }
+  /* MOT checker strip */
+  .mot-strip { background: var(--ink); color: #fff; padding: 34px 0; }
+  .mot-row { display: grid; grid-template-columns: auto 1fr auto; gap: 20px 36px; align-items: center; }
+  .mot-row h2 { color: #fff; font-size: 1.9rem; margin: 0; }
+  .mot-row h2 + p { margin: 2px 0 0; color: rgba(255,255,255,.75); font-size: 1rem; }
+  .mot-form { display: flex; gap: 12px; }
+  .plate { flex: 1; display: flex; border: 3px solid #000; border-radius: 6px; overflow: hidden; background: var(--yellow); min-width: 0; }
+  .plate:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
+  .plate-flag { background: #1d4fa3; color: #fff; width: 44px; flex: none; display: grid; place-items: center; font-family: var(--head); font-weight: 600; font-size: 1rem; }
   .plate input {
-    flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; padding: 10px 12px; text-align: center;
-    font-family: var(--head); font-weight: 800; font-size: 2.1rem; letter-spacing: .06em; text-transform: uppercase; color: #111;
+    flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; padding: 6px 12px; text-align: center;
+    font-family: var(--head); font-weight: 600; font-size: 2rem; letter-spacing: .08em; text-transform: uppercase; color: #111;
   }
-  .plate input::placeholder { color: rgba(0,0,0,.38); }
+  .plate input::placeholder { color: rgba(0,0,0,.35); }
   .plate input:focus { outline: none; }
-  .mot-note { font-size: .92rem; color: var(--muted); margin: 12px 0 0; min-height: 1.4em; }
-  .mot-note.ok { color: var(--open); font-weight: 600; }
-  .mot-links { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 16px; padding-top: 14px; font-size: .95rem; }
-  .mot-links a { font-weight: 700; text-decoration: none; }
-  .mot-links a:hover { text-decoration: underline; }
-
-  /* Trust bar */
-  .trust { background: #fff; border-bottom: 1px solid var(--line); padding: 0; }
-  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-  .trust-item { display: flex; align-items: center; gap: 14px; padding: 26px 22px; border-left: 1px solid var(--line); }
-  .trust-item:first-child { border-left: 0; padding-left: 0; }
-  .trust-item .ti { width: 48px; height: 48px; border-radius: 12px; background: var(--brand-tint); color: var(--brand); display: grid; place-items: center; flex: none; }
-  .trust-item .ti svg { width: 24px; height: 24px; }
-  .trust-item strong { display: block; font-family: var(--head); font-size: 1.25rem; color: var(--ink); line-height: 1.1; }
-  .trust-item span { color: var(--muted); font-size: .95rem; }
-
-  /* Section heads */
-  .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 48px; margin-bottom: 44px; flex-wrap: wrap; }
-  .section-head h2 { margin: 0; }
-  .section-head .lede { margin: 0; }
+  .mot-note { grid-column: 2; margin: -8px 0 0; font-size: .95rem; color: rgba(255,255,255,.7); min-height: 1.4em; }
+  .mot-note.ok { color: var(--green); font-weight: 700; }
+  .mot-reminder { color: #fff; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: .4em; }
+  .mot-reminder:hover { color: var(--yellow); }
 
   /* Services */
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .service {
-    background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
-    display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, border-color .2s;
-  }
-  .service:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(var(--brand-rgb), .14); border-color: var(--brand-line); }
-  .service-img { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--soft); }
-  .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-  .service:hover .service-img img { transform: scale(1.04); }
-  .service-img .tag {
-    position: absolute; left: 14px; top: 14px; background: var(--brand); color: #fff; font-weight: 700;
-    font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; padding: .35em .75em; border-radius: 8px;
-  }
-  .service-body { padding: 22px 24px 26px; }
-  .service-body p { color: var(--muted); font-size: 1.02rem; margin: 0; }
-  .service.more { background: var(--brand); border-color: var(--brand); color: #fff; padding: 28px 26px; justify-content: space-between; }
-  .service.more:hover { box-shadow: 0 18px 40px rgba(var(--brand-rgb), .35); }
-  .service.more h3 { color: #fff; font-size: 1.7rem; }
-  .more-list { list-style: none; padding: 0; margin: 4px 0 22px; display: grid; gap: 12px; }
-  .more-list li { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 1.08rem; }
-  .more-list .mi { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,.15); display: grid; place-items: center; flex: none; }
-  .more-list .mi svg { width: 20px; height: 20px; }
-  .service.more p { color: rgba(255,255,255,.88); margin: 0 0 14px; }
-
-  /* Why us */
-  .why { background: var(--soft); }
-  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  .why-photo { position: relative; }
-  .why-photo img { border-radius: 20px; aspect-ratio: 5 / 4; object-fit: cover; width: 100%; }
-  .why-quote {
-    position: absolute; right: -24px; bottom: -32px; max-width: 330px; background: #fff; border-radius: 16px;
-    padding: 22px 24px; box-shadow: 0 20px 44px rgba(35, 31, 32, .16); border-top: 5px solid var(--brand);
-  }
-  .why-quote p { font-size: 1.05rem; color: var(--ink); font-weight: 600; margin-bottom: 10px; line-height: 1.45; }
-  .why-quote .stars { color: var(--star); letter-spacing: 2px; }
-  .why-quote small { color: var(--muted); font-size: .92rem; }
-  .ticks { list-style: none; padding: 0; margin: 28px 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
-  .ticks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; color: var(--ink); }
-  .ticks .tk { width: 26px; height: 26px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; flex: none; margin-top: 1px; }
-  .ticks .tk svg { width: 15px; height: 15px; }
-
-  /* Booking band */
-  .booking { background: var(--brand); color: #fff; position: relative; overflow: hidden; }
-  .booking::before {
-    content: ""; position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%;
-    border: 60px solid rgba(255,255,255,.06);
-  }
-  .booking-grid { position: relative; display: grid; grid-template-columns: .95fr 1.05fr; gap: 56px; align-items: center; }
-  .booking h2 { color: #fff; }
-  .booking .eyebrow { color: #fff; opacity: .85; }
-  .booking p { color: rgba(255,255,255,.9); font-size: 1.15rem; max-width: 42ch; }
-  .big-phone { display: inline-flex; align-items: center; gap: .35em; font-family: var(--head); font-weight: 800; font-size: clamp(2.3rem, 4.6vw, 3.4rem); color: #fff; text-decoration: none; line-height: 1; margin: 6px 0 10px; }
-  .big-phone svg { width: .8em; height: .8em; }
-  .big-phone:hover { color: var(--brand-pale); }
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: step; }
-  .steps li {
-    display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: center;
-    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); padding: 20px 22px;
-    counter-increment: step;
-  }
-  .steps li::before {
-    content: counter(step); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px;
-    background: #fff; color: var(--brand); font-family: var(--head); font-weight: 800; font-size: 1.5rem;
-  }
-  .steps h3 { color: #fff; margin: 0 0 2px; font-size: 1.3rem; }
-  .steps p { margin: 0; font-size: 1rem; color: rgba(255,255,255,.85); }
+  .svc-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: start; }
+  .svc-list { list-style: none; padding: 0; margin: 28px 0 0; border-top: 2px solid var(--ink); }
+  .svc-list li { display: grid; grid-template-columns: 30px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .svc-list .tk { width: 30px; height: 30px; border-radius: 4px; background: var(--brand); color: #fff; display: grid; place-items: center; margin-top: 2px; }
+  .svc-list .tk svg { width: 17px; height: 17px; }
+  .svc-list h3 { margin: 0; font-size: 1.15rem; }
+  .svc-list p { margin: 0; color: var(--muted); }
+  .svc-side img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; }
+  .svc-ask { background: var(--paper); border-left: 4px solid var(--brand); padding: 20px 22px; margin-top: 18px; }
+  .svc-ask p { margin: 0 0 6px; font-weight: 600; color: var(--ink); }
+  .svc-ask a { font-family: var(--head); font-weight: 600; font-size: 1.6rem; text-decoration: none; }
 
   /* Reviews */
-  .review-layout { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: stretch; }
-  .score-card {
-    background: var(--ink); color: #fff; border-radius: 20px; padding: 34px 30px; display: flex; flex-direction: column; justify-content: center;
-  }
-  .score-card .big { font-family: var(--head); font-size: 5rem; font-weight: 800; line-height: 1; }
-  .score-card .stars { color: var(--star); font-size: 1.5rem; letter-spacing: 3px; margin: 6px 0 12px; }
-  .score-card p { color: rgba(255,255,255,.8); margin: 0 0 20px; }
-  .score-card a { color: #fff; font-weight: 700; text-decoration: none; }
-  .score-card a:hover { color: var(--brand-pale); }
-  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .review { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 30px 26px 26px; display: flex; flex-direction: column; }
-  .review::before { content: "\201C"; position: absolute; right: 22px; top: 2px; font-family: Georgia, serif; font-size: 6rem; line-height: 1; color: var(--brand-tint); }
-  .review .stars { color: var(--star); letter-spacing: 2px; position: relative; }
-  .review h3 { margin: 12px 0 10px; position: relative; }
-  .review blockquote { margin: 0 0 22px; color: var(--muted); flex: 1; font-size: 1.03rem; }
-  .review footer { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--ink); }
-  .review footer .av { width: 40px; height: 40px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-family: var(--head); font-weight: 800; font-size: 1.15rem; }
-  .review footer small { display: block; font-weight: 500; color: var(--muted); font-size: .88rem; }
+  .reviews { background: var(--ink); color: #fff; }
+  .reviews h2 { color: #fff; }
+  .rev-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+  .score { display: flex; align-items: center; gap: 16px; }
+  .score b { font-family: var(--head); font-weight: 600; font-size: 3.6rem; line-height: 1; color: #fff; }
+  .stars { color: var(--yellow); letter-spacing: 2px; }
+  .score .stars { font-size: 1.4rem; display: block; }
+  .score small { color: rgba(255,255,255,.7); font-size: .95rem; }
+  .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .rev { padding: 4px 32px; border-left: 1px solid rgba(255,255,255,.18); }
+  .rev:first-child { border-left: 0; padding-left: 0; }
+  .rev blockquote { margin: 12px 0 16px; font-size: 1.12rem; line-height: 1.55; color: #fff; }
+  .rev footer { color: rgba(255,255,255,.65); font-size: .95rem; }
+  .rev footer strong { color: #fff; }
+  .rev-link { display: inline-flex; align-items: center; gap: .4em; margin-top: 36px; color: #fff; font-weight: 700; text-decoration: none; }
+  .rev-link:hover { color: var(--yellow); }
 
-  /* FAQs */
-  .faqs { background: var(--soft); }
-  .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
-  .faq-side { position: sticky; top: 130px; }
-  .faq-list { display: grid; gap: 12px; }
-  .faq-list details { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .faq-list details[open] { border-color: var(--brand-line); box-shadow: 0 10px 26px rgba(var(--brand-rgb), .08); }
-  .faq-list summary {
-    list-style: none; cursor: pointer; padding: 20px 60px 20px 24px; position: relative;
-    font-family: var(--head); font-weight: 700; font-size: 1.25rem; color: var(--ink);
-  }
-  .faq-list summary::-webkit-details-marker { display: none; }
-  .faq-list summary::after {
-    content: ""; position: absolute; right: 22px; top: 50%; width: 26px; height: 26px; margin-top: -13px; border-radius: 50%;
-    background: var(--brand-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a288e' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center / 14px no-repeat;
-    transition: transform .2s;
-  }
-  .faq-list details[open] summary::after { transform: rotate(45deg); }
-  .faq-list summary:hover { color: var(--brand); }
-  .faq-answer { padding: 0 24px 22px; color: var(--muted); }
-  .faq-answer p:last-child { margin: 0; }
+  /* MOT questions */
+  .faqs { background: var(--paper); }
+  .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 48px; margin-top: 32px; }
+  .faq { border-top: 2px solid var(--ink); padding: 18px 0 10px; }
+  .faq h3 { font-size: 1.15rem; margin-bottom: .4em; }
+  .faq p { color: var(--muted); }
 
   /* Find us */
-  .find-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: stretch; }
-  .card { border: 1px solid var(--line); border-radius: 20px; padding: 32px 30px; background: #fff; }
-  .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; }
-  .contact-list li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
-  .contact-list .ci { width: 44px; height: 44px; border-radius: 12px; background: var(--brand-tint); color: var(--brand); display: grid; place-items: center; }
-  .contact-list .ci svg { width: 22px; height: 22px; }
-  .label { display: block; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 2px; }
-  .contact-list a.val, .contact-list address { font-style: normal; color: var(--ink); font-weight: 600; text-decoration: none; }
-  .contact-list a.val:hover { color: var(--brand); }
-  .hours { width: 100%; border-collapse: collapse; font-size: 1rem; margin-top: 4px; }
-  .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); }
-  .hours td:last-child { text-align: right; }
-  .hours tr:last-child td { border-bottom: 0; }
-  .hours tr.today td { color: var(--brand); font-weight: 700; }
-  .hours .shut { color: var(--muted); }
-  .map-col { display: grid; grid-template-rows: 1fr auto; gap: 18px; }
-  .map { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 380px; background: var(--soft); position: relative; }
+  .find-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: stretch; }
+  .map { position: relative; min-height: 460px; border-radius: 4px; overflow: hidden; background: var(--paper); border: 1px solid var(--line); }
   .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .areas { background: var(--soft); border-radius: 16px; padding: 18px 20px; }
-  .areas strong { display: block; color: var(--ink); margin-bottom: 10px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chips span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .3em .85em; font-size: .92rem; font-weight: 600; color: var(--body); }
+  .find-info address { font-style: normal; font-size: 1.15rem; font-weight: 600; color: var(--ink); line-height: 1.5; margin-bottom: 16px; }
+  .hours { width: 100%; border-collapse: collapse; margin: 26px 0 0; border-top: 2px solid var(--ink); }
+  .hours td { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .hours td:last-child { text-align: right; }
+  .hours tr.today td { color: var(--brand); font-weight: 700; }
+  .hours tr.today td:first-child::after { content: "Today"; font-family: var(--head); font-weight: 500; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: var(--brand); color: #fff; border-radius: 999px; padding: .15em .7em; margin-left: .7em; vertical-align: 2px; }
+  .hours .shut { color: var(--muted); }
+  .find-phone { display: inline-block; margin-top: 22px; font-family: var(--head); font-weight: 600; font-size: 2rem; text-decoration: none; }
 
-  /* Call-back form */
-  .callback { background: var(--ink); color: #fff; }
-  .callback-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
+  /* Call-back */
+  .callback { background: var(--brand); color: #fff; }
   .callback h2 { color: #fff; }
-  .callback .eyebrow { color: var(--brand-pale); }
-  .callback p.lede { color: rgba(255,255,255,.8); }
-  .callback .note { margin-top: 24px; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.88); font-size: 1rem; }
-  .callback .note a { color: #fff; font-weight: 700; }
-  form.cb { background: #fff; color: var(--ink); border-radius: 20px; padding: 32px 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 18px; }
+  .callback p.lead { color: rgba(255,255,255,.9); font-size: 1.15rem; max-width: 30em; }
+  .callback p.lead a { color: #fff; font-weight: 700; }
+  .cb-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
+  form.cb { background: #fff; color: var(--ink); border-radius: 4px; padding: 30px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .field { display: grid; gap: 6px; }
   .field.full { grid-column: 1 / -1; }
-  label { font-weight: 700; font-size: .96rem; }
-  label .opt { font-weight: 500; color: var(--muted); }
+  .cb label { font-weight: 700; font-size: .96rem; }
+  .cb label .opt { font-weight: 400; color: var(--muted); }
   .cb input, .cb select, .cb textarea {
-    font: inherit; font-size: 1rem; font-weight: 500; color: var(--ink); width: 100%;
-    padding: .75em .9em; border: 1.5px solid #d6cfda; border-radius: 10px; background: #fff;
+    font: inherit; font-size: 1rem; color: var(--ink); width: 100%; padding: .7em .85em;
+    border: 1.5px solid #cfc7bf; border-radius: 4px; background: #fff;
   }
-  .cb input:focus, .cb select:focus, .cb textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 4px rgba(var(--brand-rgb), .15); }
-  .cb input.reg { text-transform: uppercase; font-family: var(--head); font-weight: 800; font-size: 1.15rem; letter-spacing: .06em; background: var(--plate); border-color: #c9ad12; }
-  .cb ::placeholder { color: #9a93a0; font-weight: 400; opacity: 1; }
-  .cb input.reg::placeholder { color: rgba(0,0,0,.35); font-weight: 700; }
+  .cb input:focus, .cb select:focus, .cb textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(122,40,142,.18); }
+  .cb input.reg { font-family: var(--head); font-weight: 600; font-size: 1.15rem; letter-spacing: .08em; text-transform: uppercase; background: var(--yellow); border-color: #000; }
+  .cb ::placeholder { color: #9b9493; opacity: 1; }
+  .cb input.reg::placeholder { color: rgba(0,0,0,.35); }
   .cb textarea { min-height: 110px; resize: vertical; }
   .form-foot { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .form-foot small { color: var(--muted); font-size: .9rem; flex: 1; min-width: 200px; }
-  .form-msg { grid-column: 1 / -1; display: none; padding: 14px 16px; border-radius: 10px; font-weight: 600; }
-  .form-msg.ok { display: block; background: #e8f5ec; color: var(--open); }
-  .form-msg.err { display: block; background: #fbeaea; color: var(--closed); }
+  .form-msg { grid-column: 1 / -1; display: none; padding: 14px 16px; border-radius: 4px; font-weight: 600; }
+  .form-msg.ok { display: block; background: #e6f6ec; color: #1f7a3f; }
+  .form-msg.err { display: block; background: #fbeaea; color: #a12a2a; }
   .form-msg a { color: inherit; }
   .hp { position: absolute; left: -9999px; }
 
   /* Footer */
-  .site-footer { background: #171415; color: rgba(255,255,255,.72); padding: 64px 0 28px; font-size: .98rem; }
-  .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; }
-  .footer-logo { background: #fff; border-radius: 14px; padding: 14px 16px; display: inline-block; margin-bottom: 16px; }
-  .footer-logo img { width: 230px; }
-  .site-footer h4 { font-family: var(--head); color: #fff; font-size: 1.15rem; margin: 0 0 14px; letter-spacing: .02em; }
-  .site-footer a { color: #fff; text-decoration: none; font-weight: 600; }
-  .site-footer a:hover { color: var(--brand-pale); }
-  .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .site-footer { background: var(--ink); color: rgba(255,255,255,.72); padding: 56px 0 26px; font-size: .98rem; }
+  .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 36px; }
+  .footer-logo { display: inline-block; background: #fff; padding: 12px 14px; border-radius: 4px; margin-bottom: 14px; }
+  .footer-logo img { width: 220px; }
+  .site-footer h4 { font-family: var(--head); font-weight: 500; color: #fff; font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 12px; }
+  .site-footer a { color: #fff; text-decoration: none; font-weight: 700; }
+  .site-footer a:hover { color: var(--yellow); }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
   .site-footer address { font-style: normal; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .9rem; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .9rem; }
 
   /* Mobile call bar */
   .call-bar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; display: none; }
-  .call-bar .btn { width: 100%; padding: 1em; font-size: 1.1rem; box-shadow: 0 12px 30px rgba(20,5,25,.4); }
+  .call-bar .btn { width: 100%; padding: 1em; font-size: 1.1rem; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1100px) {
     .nav a.link { display: none; }
-    .trust-grid { grid-template-columns: repeat(2, 1fr); }
-    .trust-item:nth-child(3) { border-left: 0; padding-left: 0; }
-    .trust-item:nth-child(n+3) { border-top: 1px solid var(--line); }
-    .review-layout { grid-template-columns: 1fr; }
-    .score-card { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px 22px; }
-    .score-card p { margin: 0; }
   }
   @media (max-width: 960px) {
-    .hero-grid, .why-grid, .booking-grid, .faq-grid, .find-grid, .callback-grid { grid-template-columns: minmax(0, 1fr); }
-    .hero-photo { position: relative; width: 100%; height: 260px; }
-    .hero-photo::after { background: linear-gradient(180deg, rgba(var(--brand-rgb), 0) 45%, var(--brand) 100%), rgba(20, 16, 18, .15); }
-    .hero-grid { min-height: 0; padding: 0 24px 56px; margin-top: -40px; gap: 36px; }
-    .mot-card { justify-self: stretch; max-width: none; }
-    .services { grid-template-columns: repeat(2, 1fr); }
-    .review-grid { grid-template-columns: 1fr; }
-    .why-quote { right: 16px; bottom: -28px; }
-    .why-photo { margin-bottom: 30px; }
-    .faq-side { position: static; }
+    .hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+    .hero-photo { order: -1; height: 260px; }
+    .hero-text { padding: 44px 24px 52px; }
+    .mot-row { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .mot-note { grid-column: 1; margin: 0; }
+    .svc-grid, .find-grid, .cb-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+    .svc-side img { aspect-ratio: 16 / 10; }
+    .rev-grid { grid-template-columns: 1fr; gap: 28px; }
+    .rev, .rev:first-child { border-left: 0; padding: 0 0 24px; border-bottom: 1px solid rgba(255,255,255,.18); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 680px) {
     body { font-size: 17px; }
-    section { padding: 68px 0; }
+    section { padding: 64px 0; }
     .wrap { padding: 0 16px; }
-    .hero-grid { padding: 0 16px 48px; }
+    .hero-text { padding: 40px 16px 48px; }
     .topbar .hide-sm { display: none; }
     .header-row { height: 72px; }
-    .brand img { width: 215px; }
-    .nav .btn { padding: .65em 1em; font-size: .98rem; }
-    .nav .btn .num { display: none; }
+    .brand img { width: 210px; }
+    .head-phone { display: none; }
+    .head-call { display: inline-flex; padding: .7em 1em; }
     .hero-actions .btn { flex: 1 1 100%; }
-    .trust-grid { grid-template-columns: 1fr; }
-    .trust-item, .trust-item:first-child, .trust-item:nth-child(3) { border-left: 0; padding: 18px 0; }
-    .trust-item + .trust-item { border-top: 1px solid var(--line); }
-    .services { grid-template-columns: 1fr; }
-    .ticks { grid-template-columns: 1fr; }
-    .why-quote { position: relative; right: auto; bottom: auto; margin: -40px 14px 0; max-width: none; }
-    .why-photo { margin-bottom: 0; }
-    form.cb { grid-template-columns: 1fr; padding: 24px 20px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .mot-form { flex-direction: column; }
+    .faq-grid { grid-template-columns: 1fr; }
+    form.cb { grid-template-columns: 1fr; padding: 24px 18px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     .site-footer { padding-bottom: 110px; }
     .call-bar { display: block; }
-    .map { min-height: 300px; }
-    .score-card .big { font-size: 3.6rem; }
+    .map { min-height: 320px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    * { transition: none !important; }
+    * { transition: none !important; animation: none !important; }
   }
 </style>
 </head>
 <body>
 
-<!-- Icons -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10 3.5 10 6v2H8v3h2v11h4V11h2.6l.4-3z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
-    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9z"/><path d="m9 13 2 2 4-4"/></symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></symbol>
-    <symbol id="i-exhaust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h11a3 3 0 0 0 3-3V8h3"/><path d="M2 18h12a5 5 0 0 0 5-5v-1h2"/><path d="M19 5h.01M22 8h.01M21 3h.01"/></symbol>
-    <symbol id="i-wheel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2"/><path d="M12 14v8M10.3 11 3 8.5M13.7 11 21 8.5"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
   </defs>
 </svg>
 
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-left">
-      <span>Mon to Fri, 8:00am to 4:30pm</span>
+      <span class="status js-status"><span class="dot"></span><span class="js-status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
       <span class="hide-sm">Upper Bankfield Mills, Almondbury Bank, HD5 8HF</span>
     </div>
     <div class="topbar-right">
@@ -467,338 +325,175 @@
   </div>
 </div>
 
-<header class="site-header" id="header">
+<header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="#top" aria-label="Almondbury Garage, home">
       <img src="assets/logo.png" width="523" height="126" alt="Almondbury Garage, Huddersfield. MOT, Service and Repair Centre">
     </a>
     <nav class="nav" aria-label="Main">
       <a class="link" href="#services">Services</a>
-      <a class="link" href="#mot">MOT check</a>
+      <a class="link" href="#mot">MOT</a>
       <a class="link" href="#reviews">Reviews</a>
-      <a class="link" href="#faqs">FAQs</a>
       <a class="link" href="#find-us">Find us</a>
-      <a class="btn btn-primary" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg><span>Call<span class="num"> 01484 546693</span></span></a>
+      <a class="head-phone" href="tel:01484546693"><small>To book, call</small><span>01484 546693</span></a>
+      <a class="btn btn-primary head-call" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>Call</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- Hero -->
   <section class="hero">
-    <div class="hero-photo"><img src="assets/img/hero.jpg" alt="" width="2000" height="1333"></div>
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">MOT · Servicing · Repairs</span>
-        <h1>Honest MOTs, servicing and repairs in Huddersfield</h1>
-        <p class="sub">Your friendly, independent garage at Upper Bankfield Mills, just off Almondbury Bank. Give us a ring and we'll get you booked in.</p>
-        <div class="hero-actions">
-          <a class="btn btn-white" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>Call 01484 546693</a>
-          <a class="btn btn-outline" href="#contact">Ring me back</a>
-        </div>
-        <span class="status" id="status" aria-live="polite"><span class="dot"></span><span id="status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
-        <div class="hero-proof">
-          <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 from 9 reviews</span>
-        </div>
+    <div class="hero-text">
+      <span class="tag light" style="align-self:flex-start">MOT · Service · Repairs</span>
+      <h1>MOTs, servicing and repairs in Huddersfield</h1>
+      <p class="sub">Independent garage at Upper Bankfield Mills, off Almondbury Bank in Moldgreen. Ring us to book.</p>
+      <div class="hero-actions">
+        <a class="btn btn-white" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>01484 546693</a>
+        <a class="btn btn-line" href="#contact">Ring me back</a>
       </div>
-
-      <aside class="mot-card" id="mot" aria-labelledby="mot-title">
-        <h2 id="mot-title">When's your MOT due?</h2>
-        <p>Pop your reg in to check your MOT date and history on GOV.UK.</p>
-        <form id="mot-form" novalidate>
-          <label class="plate" for="mot-reg">
-            <span class="plate-flag" aria-hidden="true">UK</span>
-            <span class="sr" style="position:absolute;left:-9999px">Registration number</span>
-            <input id="mot-reg" name="reg" size="8" placeholder="ENTER REG" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false">
-          </label>
-          <button class="btn btn-primary btn-block" type="submit">Check my MOT <svg class="i"><use href="#i-arrow"/></svg></button>
-        </form>
-        <p class="mot-note" id="mot-note">Opens the official GOV.UK checker in a new tab.</p>
-        <div class="mot-links">
-          <a href="https://www.gov.uk/get-stop-view-mot-reminder" target="_blank" rel="noopener">Free MOT reminders</a>
-          <a href="tel:01484546693">Book: 01484 546693</a>
-        </div>
-      </aside>
+      <span class="status js-status" aria-live="polite"><span class="dot"></span><span class="js-status-text">Mon to Fri, 8:00am to 4:30pm</span></span>
     </div>
+    <div class="hero-photo"><img src="assets/img/hero.jpg" alt="" width="1500" height="1000"></div>
   </section>
 
-  <!-- Trust bar -->
-  <div class="trust">
-    <div class="wrap trust-grid">
-      <div class="trust-item">
-        <span class="ti"><svg><use href="#i-star"/></svg></span>
-        <div><strong>5.0 rated</strong><span>9 verified reviews</span></div>
+  <div class="mot-strip" id="mot">
+    <div class="wrap mot-row">
+      <div>
+        <h2>When's your MOT due?</h2>
+        <p>Check your MOT date and history on GOV.UK.</p>
       </div>
-      <div class="trust-item">
-        <span class="ti"><svg><use href="#i-clipboard"/></svg></span>
-        <div><strong>MOT test centre</strong><span>Class 4 cars and vans</span></div>
-      </div>
-      <div class="trust-item">
-        <span class="ti"><svg><use href="#i-home"/></svg></span>
-        <div><strong>Independent</strong><span>Just off Wakefield Road</span></div>
-      </div>
-      <div class="trust-item">
-        <span class="ti"><svg><use href="#i-clock"/></svg></span>
-        <div><strong>Open weekdays</strong><span>8:00am to 4:30pm</span></div>
-      </div>
+      <form class="mot-form" id="mot-form" novalidate>
+        <label class="plate" for="mot-reg">
+          <span class="plate-flag" aria-hidden="true">UK</span>
+          <span style="position:absolute;left:-9999px">Registration number</span>
+          <input id="mot-reg" name="reg" size="8" placeholder="ENTER REG" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        </label>
+        <button class="btn btn-yellow" type="submit">Check MOT <svg class="i"><use href="#i-arrow"/></svg></button>
+      </form>
+      <a class="mot-reminder" href="https://www.gov.uk/get-stop-view-mot-reminder" target="_blank" rel="noopener">Free MOT reminders <svg class="i"><use href="#i-arrow"/></svg></a>
+      <p class="mot-note" id="mot-note">Opens the official GOV.UK checker in a new tab.</p>
     </div>
   </div>
 
-  <!-- Services -->
   <section id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">What we do</span>
-          <h2 style="max-width:13em">Everything your car needs, under one roof</h2>
-        </div>
-        <p class="lede">From your yearly MOT to that knock you can't pin down. If it's on four wheels, bring it to us.</p>
-      </div>
-
-      <div class="services">
-        <article class="service">
-          <div class="service-img"><img src="assets/img/mot.jpg" alt="Checking underneath a car on a ramp" loading="lazy" width="1000" height="666"><span class="tag">Class 4</span></div>
-          <div class="service-body">
-            <h3>MOT testing</h3>
-            <p>MOTs for cars, vans and motorhomes up to 12 passenger seats, plus goods vehicles up to 3,000kg.</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="service-img"><img src="assets/img/servicing.jpg" alt="Mechanic working in an engine bay" loading="lazy" width="1000" height="666"></div>
-          <div class="service-body">
-            <h3>Servicing</h3>
-            <p>Interim and full services to keep your car running right and your service history up to date.</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="service-img"><img src="assets/img/repairs.jpg" alt="Car on a lift with a wheel off, showing the brake disc" loading="lazy" width="1000" height="666"></div>
-          <div class="service-body">
-            <h3>Repairs</h3>
-            <p>Brakes, clutches, suspension, engine work and everything in between.</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="service-img"><img src="assets/img/diagnostics.jpg" alt="Diagnostic tablet plugged into a car" loading="lazy" width="1000" height="666"></div>
-          <div class="service-body">
-            <h3>Fault diagnosis</h3>
-            <p>Warning light on the dash? We'll plug in, find out what's causing it and talk you through the fix.</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="service-img"><img src="assets/img/tyres.jpg" alt="Mechanic fitting a tyre" loading="lazy" width="1000" height="666"></div>
-          <div class="service-body">
-            <h3>Tyres</h3>
-            <p>New tyres supplied and fitted, plus puncture checks and pressures.</p>
-          </div>
-        </article>
-        <article class="service more">
-          <div>
-            <h3>And plenty more</h3>
-            <ul class="more-list">
-              <li><span class="mi"><svg><use href="#i-exhaust"/></svg></span>Exhausts</li>
-              <li><span class="mi"><svg><use href="#i-wheel"/></svg></span>Wheel alignment</li>
-              <li><span class="mi"><svg><use href="#i-shield"/></svg></span>Insurance work</li>
-            </ul>
-          </div>
-          <div>
-            <p>Not sure if we do it? Just ask.</p>
-            <a class="btn btn-white btn-block" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>01484 546693</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why us -->
-  <section class="why">
-    <div class="wrap why-grid">
-      <div class="why-photo">
-        <img src="assets/img/why.jpg" alt="Hands working on a car engine" loading="lazy" width="1200" height="800">
-        <figure class="why-quote" style="margin:0">
-          <p>"Very genuine and didn't feel like they were trying to overcharge etc like other garages."</p>
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span> <small>Leisanne, BookMyGarage</small>
-        </figure>
-      </div>
+    <div class="wrap svc-grid">
       <div>
-        <span class="eyebrow">Why Almondbury Garage</span>
-        <h2>A proper local garage</h2>
-        <p class="lede">We're a small, independent garage in Moldgreen. No call centres and no hard sell. Just good work at a fair price, from people who'll give you a straight answer.</p>
-        <ul class="ticks">
-          <li><span class="tk"><svg><use href="#i-check"/></svg></span>Honest advice and fair prices</li>
-          <li><span class="tk"><svg><use href="#i-check"/></svg></span>MOT, servicing and repairs in one place</li>
-          <li><span class="tk"><svg><use href="#i-check"/></svg></span>Friendly, local and independent</li>
-          <li><span class="tk"><svg><use href="#i-check"/></svg></span>Easy to find, just off Wakefield Road</li>
+        <span class="tag">Services</span>
+        <h2>What we do</h2>
+        <p class="muted" style="max-width:34em">Cars and vans, from the yearly MOT and servicing to repairs.</p>
+        <ul class="svc-list">
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>MOT testing</h3><p>Class 4: cars, vans and motorhomes up to 12 passenger seats, and goods vehicles up to 3,000kg.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Servicing</h3><p>Interim and full services.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Repairs</h3><p>Brakes, clutches, suspension and engine work.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Fault diagnosis</h3><p>Warning lights and faults found and fixed.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Tyres</h3><p>Supplied and fitted.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Exhausts</h3><p>Repaired and replaced.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Wheel alignment</h3><p>For cars pulling to one side or wearing tyres unevenly.</p></div></li>
+          <li><span class="tk"><svg><use href="#i-check"/></svg></span><div><h3>Insurance work</h3><p>Repairs for insurance claims.</p></div></li>
         </ul>
-        <a class="btn btn-primary" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>Call 01484 546693</a>
+      </div>
+      <div class="svc-side">
+        <img src="assets/img/servicing.jpg" alt="Mechanic working on a car engine" loading="lazy" width="1000" height="666">
+        <div class="svc-ask">
+          <p>Something not on the list? Give us a ring.</p>
+          <a href="tel:01484546693">01484 546693</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking -->
-  <section class="booking" id="book">
-    <div class="wrap booking-grid">
-      <div>
-        <span class="eyebrow">Booking</span>
-        <h2>Booking's done over the phone</h2>
-        <p>No online booking systems and no waiting around for emails. Ring us during opening hours and we'll sort a day out there and then.</p>
-        <a class="big-phone" href="tel:01484546693"><svg><use href="#i-phone"/></svg>01484 546693</a>
-        <p style="font-size:1rem;opacity:.85;margin:0">Monday to Friday, 8:00am to 4:30pm</p>
-      </div>
-      <ol class="steps">
-        <li><div><h3>Give us a ring</h3><p>Tell us what the car needs, or what it's doing.</p></div></li>
-        <li><div><h3>Pick a day</h3><p>We'll find a slot that works for you.</p></div></li>
-        <li><div><h3>Drop it off</h3><p>Bring it to Upper Bankfield Mills and we'll take it from there.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Reviews -->
-  <section id="reviews">
+  <section class="reviews" id="reviews">
     <div class="wrap">
-      <div class="section-head">
+      <div class="rev-head">
         <div>
-          <span class="eyebrow">Reviews</span>
-          <h2>What our customers say</h2>
+          <span class="tag light">Reviews</span>
+          <h2 style="margin:0">What customers say</h2>
+        </div>
+        <div class="score">
+          <b>5.0</b>
+          <div><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><small>9 reviews on BookMyGarage</small></div>
         </div>
       </div>
-      <div class="review-layout">
-        <div class="score-card">
-          <div class="big">5.0</div>
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>From 9 verified customer reviews on BookMyGarage.</p>
-          <a href="https://bookmygarage.com/garage-detail/almondburygaragelimted/hd58hf/" target="_blank" rel="noopener">Read them all <svg class="i" style="vertical-align:-3px"><use href="#i-arrow"/></svg></a>
-        </div>
-        <div class="review-grid">
-          <article class="review">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <h3>Trustworthy</h3>
-            <blockquote>2nd time I have used this garage for MOT and service of my car. Excellent service.</blockquote>
-            <footer><span class="av" aria-hidden="true">S</span><div>Shelagh<small>May 2025</small></div></footer>
-          </article>
-          <article class="review">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <h3>Very friendly local garage</h3>
-            <blockquote>I am very happy with my MOT and service. I am happy to support a local garage and I feel that the work was completed to a good standard.</blockquote>
-            <footer><span class="av" aria-hidden="true">C</span><div>Catherine<small>February 2024</small></div></footer>
-          </article>
-          <article class="review">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <h3>Great service!</h3>
-            <blockquote>Really happy! First time trying this local garage and they were friendly and helpful. … Definitely recommend!</blockquote>
-            <footer><span class="av" aria-hidden="true">L</span><div>Leisanne<small>March 2023</small></div></footer>
-          </article>
-        </div>
+      <div class="rev-grid">
+        <article class="rev">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>"2nd time I have used this garage for MOT and service of my car. Excellent service."</blockquote>
+          <footer><strong>Shelagh</strong> · May 2025</footer>
+        </article>
+        <article class="rev">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>"I am very happy with my MOT and service. I am happy to support a local garage and I feel that the work was completed to a good standard."</blockquote>
+          <footer><strong>Catherine</strong> · February 2024</footer>
+        </article>
+        <article class="rev">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>"Really happy! First time trying this local garage and they were friendly and helpful. Very genuine and didn't feel like they were trying to overcharge etc like other garages. Definitely recommend!"</blockquote>
+          <footer><strong>Leisanne</strong> · March 2023</footer>
+        </article>
       </div>
+      <a class="rev-link" href="https://bookmygarage.com/garage-detail/almondburygaragelimted/hd58hf/" target="_blank" rel="noopener">Read all the reviews on BookMyGarage <svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
   </section>
 
-  <!-- FAQs -->
   <section class="faqs" id="faqs">
-    <div class="wrap faq-grid">
-      <div class="faq-side">
-        <span class="eyebrow">FAQs</span>
-        <h2>Good to know</h2>
-        <p class="lede">The questions we get asked most. Anything else, just give us a ring.</p>
-        <a class="btn btn-primary" href="tel:01484546693"><svg class="i"><use href="#i-phone"/></svg>Call 01484 546693</a>
-      </div>
-      <div class="faq-list">
-        <details open>
-          <summary>How do I book?</summary>
-          <div class="faq-answer"><p>Ring us on <a href="tel:01484546693">01484 546693</a>, Monday to Friday between 8:00am and 4:30pm, and we'll find you a day. If you can't talk right now, <a href="#contact">leave your number</a> and we'll ring you back.</p></div>
-        </details>
-        <details>
-          <summary>Can I get my MOT done early?</summary>
-          <div class="faq-answer"><p>Yes. You can get an MOT up to a month (minus a day) before your current one runs out and keep the same renewal date. Not sure when yours is due? <a href="#mot">Check it here</a>.</p></div>
-        </details>
-        <details>
-          <summary>What happens if my car fails its MOT?</summary>
-          <div class="faq-answer"><p>We'll explain what failed and what it'll take to put right, and we can do the repairs here. Under GOV.UK rules, if you leave the car with us for the repairs and it's retested within 10 working days, the partial retest is free.</p></div>
-        </details>
-        <details>
-          <summary>Which vehicles can you MOT?</summary>
-          <div class="faq-answer"><p>We're a Class 4 test centre. That covers cars, vans and motorhomes with up to 12 passenger seats, and goods vehicles up to 3,000kg.</p></div>
-        </details>
-        <details>
-          <summary>I've got a warning light on. Can you look at it?</summary>
-          <div class="faq-answer"><p>Yes. We'll plug in the diagnostic kit, find out what's behind it and tell you what needs doing before we go ahead.</p></div>
-        </details>
-        <details>
-          <summary>Are you open at weekends?</summary>
-          <div class="faq-answer"><p>No, we're open Monday to Friday, 8:00am to 4:30pm, and closed on Saturdays and Sundays.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Find us -->
-  <section id="find-us">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Find us</span>
-          <h2>Pop in, or give us a ring</h2>
+      <span class="tag">MOT info</span>
+      <h2>MOT questions</h2>
+      <div class="faq-grid">
+        <div class="faq">
+          <h3>How do I book?</h3>
+          <p>Ring us on <a href="tel:01484546693">01484 546693</a>, Monday to Friday, 8:00am to 4:30pm. If you can't talk now, <a href="#contact">leave your number</a> and we'll ring you back.</p>
         </div>
-        <p class="lede">Just off Almondbury Bank in Moldgreen, a couple of minutes from Wakefield Road and about two miles from Huddersfield town centre.</p>
-      </div>
-
-      <div class="find-grid">
-        <div class="card">
-          <ul class="contact-list">
-            <li>
-              <span class="ci"><svg><use href="#i-phone"/></svg></span>
-              <div><span class="label">Phone</span><a class="val" href="tel:01484546693" style="font-family:var(--head);font-size:1.6rem;font-weight:800">01484 546693</a></div>
-            </li>
-            <li>
-              <span class="ci"><svg><use href="#i-pin"/></svg></span>
-              <div><span class="label">Address</span>
-                <address>Almondbury Garage<br>Upper Bankfield Mills<br>Almondbury Bank, Moldgreen<br>Huddersfield HD5 8HF</address>
-                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Upper+Bankfield+Mills,+Almondbury+Bank,+Huddersfield+HD5+8HF" target="_blank" rel="noopener" style="font-weight:700;display:inline-flex;align-items:center;gap:.35em;margin-top:6px;text-decoration:none">Get directions <svg class="i"><use href="#i-arrow"/></svg></a>
-              </div>
-            </li>
-            <li>
-              <span class="ci"><svg><use href="#i-clock"/></svg></span>
-              <div><span class="label">Opening hours</span>
-                <table class="hours" id="hours">
-                  <tr data-day="1"><td>Monday</td><td>8:00am – 4:30pm</td></tr>
-                  <tr data-day="2"><td>Tuesday</td><td>8:00am – 4:30pm</td></tr>
-                  <tr data-day="3"><td>Wednesday</td><td>8:00am – 4:30pm</td></tr>
-                  <tr data-day="4"><td>Thursday</td><td>8:00am – 4:30pm</td></tr>
-                  <tr data-day="5"><td>Friday</td><td>8:00am – 4:30pm</td></tr>
-                  <tr data-day="6"><td>Saturday</td><td class="shut">Closed</td></tr>
-                  <tr data-day="0"><td>Sunday</td><td class="shut">Closed</td></tr>
-                </table>
-              </div>
-            </li>
-          </ul>
+        <div class="faq">
+          <h3>Can I get my MOT done early?</h3>
+          <p>Yes. You can have it done up to a month (minus a day) before your current MOT runs out and keep the same renewal date.</p>
         </div>
-        <div class="map-col">
-          <div class="map">
-            <iframe title="Map showing Almondbury Garage, HD5 8HF"
-              src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s53.642597,-1.762986!6i16"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="areas">
-            <strong>Handy for drivers in</strong>
-            <div class="chips">
-              <span>Almondbury</span><span>Moldgreen</span><span>Dalton</span><span>Rawthorpe</span><span>Kirkheaton</span><span>Waterloo</span><span>Newsome</span><span>Lepton</span><span>Huddersfield town centre</span>
-            </div>
-          </div>
+        <div class="faq">
+          <h3>What if my car fails?</h3>
+          <p>We'll tell you what failed and can do the repairs here. If the car stays with us for the repairs and is retested within 10 working days, the partial retest is free.</p>
+        </div>
+        <div class="faq">
+          <h3>Which vehicles can you test?</h3>
+          <p>Class 4: cars, vans and motorhomes with up to 12 passenger seats, and goods vehicles up to 3,000kg.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call-back request -->
-  <section class="callback" id="contact">
-    <div class="wrap callback-grid">
-      <div>
-        <span class="eyebrow">Got a question?</span>
-        <h2>Leave your number and we'll ring you back</h2>
-        <p class="lede">Can't call right now? Pop your details in and we'll give you a ring during opening hours.</p>
-        <p class="note">Need to book? It's quickest to call us on <a href="tel:01484546693">01484 546693</a>.</p>
+  <section id="find-us">
+    <div class="wrap find-grid">
+      <div class="map">
+        <iframe title="Map showing Almondbury Garage, HD5 8HF"
+          src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s53.642597,-1.762986!6i16"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <div class="find-info">
+        <span class="tag">Find us</span>
+        <h2>Where we are</h2>
+        <address>Almondbury Garage<br>Upper Bankfield Mills<br>Almondbury Bank, Moldgreen<br>Huddersfield HD5 8HF</address>
+        <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Upper+Bankfield+Mills,+Almondbury+Bank,+Huddersfield+HD5+8HF" target="_blank" rel="noopener">Get directions <svg class="i"><use href="#i-arrow"/></svg></a>
+        <table class="hours" id="hours">
+          <tr data-day="1"><td>Monday</td><td>8:00am – 4:30pm</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>8:00am – 4:30pm</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>8:00am – 4:30pm</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>8:00am – 4:30pm</td></tr>
+          <tr data-day="5"><td>Friday</td><td>8:00am – 4:30pm</td></tr>
+          <tr data-day="6"><td>Saturday</td><td class="shut">Closed</td></tr>
+          <tr data-day="0"><td>Sunday</td><td class="shut">Closed</td></tr>
+        </table>
+        <a class="find-phone" href="tel:01484546693">01484 546693</a>
+      </div>
+    </div>
+  </section>
 
+  <section class="callback" id="contact">
+    <div class="wrap cb-grid">
+      <div>
+        <span class="tag light">Call back</span>
+        <h2>Can't call right now?</h2>
+        <p class="lead">Leave your number and we'll ring you back during opening hours. To book, it's quickest to ring us on <a href="tel:01484546693">01484 546693</a>.</p>
+      </div>
       <form class="cb" id="callback-form" novalidate>
         <div class="field">
           <label for="f-name">Your name</label>
@@ -842,33 +537,31 @@
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="#top"><img src="assets/logo.png" width="523" height="126" alt="Almondbury Garage" loading="lazy"></a>
-        <p>Friendly, independent MOT, service and repair centre in Moldgreen, Huddersfield.</p>
+        <p>MOT, service and repair centre in Moldgreen, Huddersfield.</p>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h4>Address</h4>
         <address>Upper Bankfield Mills<br>Almondbury Bank, Moldgreen<br>Huddersfield HD5 8HF</address>
-        <p style="margin-top:10px"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Upper+Bankfield+Mills,+Almondbury+Bank,+Huddersfield+HD5+8HF" target="_blank" rel="noopener">Get directions</a></p>
       </div>
       <div>
         <h4>Opening hours</h4>
         <ul>
-          <li>Monday to Friday<br>8:00am to 4:30pm</li>
-          <li>Saturday and Sunday<br>Closed</li>
+          <li>Monday to Friday, 8:00am to 4:30pm</li>
+          <li>Saturday and Sunday, closed</li>
         </ul>
       </div>
       <div>
-        <h4>Get in touch</h4>
+        <h4>Contact</h4>
         <ul>
           <li><a href="tel:01484546693">01484 546693</a></li>
           <li><a href="#contact">Ask for a call back</a></li>
           <li><a href="https://www.facebook.com/almondburyMOT/" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://www.gov.uk/get-stop-view-mot-reminder" target="_blank" rel="noopener">Free MOT reminders</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Almondbury Garage, Huddersfield.</span>
-      <a href="#top">Back to top ↑</a>
+      <span>© <span id="year">2026</span> Almondbury Garage, Huddersfield</span>
+      <a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
@@ -894,12 +587,6 @@
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Header shadow once the page scrolls
-  var header = document.getElementById("header");
-  function onScroll() { header.classList.toggle("scrolled", window.scrollY > 50); }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
   // Open / closed status, worked out in UK time wherever the visitor is.
   (function () {
     var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -922,25 +609,23 @@
       return h + (m === "00" ? "" : ":" + m) + suffix;
     }
 
-    var status = document.getElementById("status");
-    var text = document.getElementById("status-text");
+    var open = false, text;
     var today = HOURS[day];
     if (today && now >= today[0] && now < today[1]) {
-      text.textContent = "Open now, until " + pretty(today[1]);
-      return;
-    }
-    status.classList.add("is-closed");
-    if (today && now < today[0]) {
-      text.textContent = "Closed, opens today at " + pretty(today[0]);
-      return;
-    }
-    for (var i = 1; i <= 7; i++) {
-      var d = (day + i) % 7;
-      if (HOURS[d]) {
-        text.textContent = "Closed, opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " at " + pretty(HOURS[d][0]);
-        return;
+      open = true;
+      text = "Open now, until " + pretty(today[1]);
+    } else if (today && now < today[0]) {
+      text = "Closed, opens today at " + pretty(today[0]);
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var d = (day + i) % 7;
+        if (HOURS[d]) { text = "Closed, opens " + (i === 1 ? "tomorrow" : DAYS[d]) + " at " + pretty(HOURS[d][0]); break; }
       }
     }
+    document.querySelectorAll(".js-status").forEach(function (el) {
+      el.classList.add(open ? "is-open" : "is-closed");
+      el.querySelector(".js-status-text").textContent = text;
+    });
   })();
 
   // MOT checker: copy the reg so it can be pasted straight into GOV.UK, then open the checker.
